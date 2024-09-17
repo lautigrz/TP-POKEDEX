@@ -1,0 +1,180 @@
+.nuevo-jugador{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin: 10%;
+   
+}
+
+.nuevo-jugador > form{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30%;
+    height:45vh;
+    border:1px solid black;
+    border-radius:10px;
+    padding:5%;
+    gap: 10px;
+  
+    
+}
+
+.nuevo-jugador > form > input{
+  height: 5vh;
+  border:1px solid black;
+  border-radius:10px;
+
+}
+
+.subir{
+    cursor: pointer;
+   
+}
+
+.contenedor{
+    display:flex;
+    flex-direction:column;
+}
+.mensaje-exito {
+color: green;
+border: 1px solid green;
+background-color: #d4edda;
+padding: 10px;
+border-radius: 5px;
+margin: 10px 0;
+}
+
+.mensaje-error {
+color: red;
+border: 1px solid red;
+background-color: #f8d7da;
+padding: 10px;
+border-radius: 5px;
+margin: 10px 0;
+}
+
+.query-exito {
+    color: green;
+    border: 1px solid green;
+    background-color: #d4edda;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 30%;
+    }
+    
+.query-error {
+    color: red;
+    border: 1px solid red;
+    background-color: #f8d7da;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    }
+
+/* Estilos generales para la tabla */
+.tablas table {
+width: 80%;
+border-collapse: collapse;
+margin: 20px auto;
+font-family: Arial, sans-serif;
+font-size: 14px
+}
+
+/* Estilos para los encabezados de la tabla */
+.tablas th {
+background-color: #4CAF50;
+color: white;
+padding: 8px;
+text-align: left;
+border: 1px solid #ddd;
+}
+
+/* Estilos para las celdas de la tabla */
+.tablas td {
+padding: 7px;
+border: 1px solid #ddd;
+text-align: center;
+}
+
+/* Estilos para las filas alternas */
+.tablas tr:nth-child(even) {
+background-color: #f2f2f2;
+}
+
+/* Estilos para las imágenes en la tabla */
+.img-sc {
+width: 60%; /* Ancho fijo */
+height: 100px; /* Alto fijo */
+object-fit: cover; /* Asegura que la imagen no se distorsione */
+border-radius: 5px; /* Bordes redondeados */
+border: 1px solid #ddd; /* Borde ligero */
+}
+
+/* Estilo para el contenedor de la tabla */
+.tablas {
+padding: 0 20px;
+max-width: 100%; /* Ajusta el ancho máximo según sea necesario */
+margin: 0 auto;
+}
+.ancla{
+display:flex;
+justify-content:center;
+background-color:rgb(7, 160, 7);
+
+width: 15%;
+border-radius:10px;
+margin: 0 auto;
+margin-top:10px;
+}
+
+.ancla:hover{
+    background-color:green;
+}
+
+a{
+color:white;
+text-align:center;
+text-decoration:none;
+padding:10px;
+font-weight:700;
+font-size:13px;
+font-family: Arial, sans-serif;
+}
+
+#formu{
+display:flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+gap:20px;
+height: 16vh;
+border: none;
+}
+
+.update{
+font-size:13px;
+padding:10px;
+border:none;
+color:white;
+border-radius:10px;
+cursor:pointer;
+}
+
+#modificar{
+background-color:rgb(104, 167, 86);
+}
+#modificar:hover{
+background-color:rgb(85, 184, 88 );
+}
+#eliminar{
+background-color:rgb(224, 25, 25 );
+
+}
+#eliminar:hover{
+background-color:rgb( 241, 52, 52  );
+
+}
