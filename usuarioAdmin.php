@@ -53,16 +53,16 @@ $datos = $db->query($query);
                 <?php foreach ($datos as $fila): ?>
                     <tr>
                     
-                        <td><img src="<?php echo $fila['ruta_pokemon']; ?>" alt="Imagen Jugador" class="img-sc" ></td>
-                        <td><img src="<?php echo $fila['ruta_tipo']; ?>" alt="Imagen Equipo" class="img-sc"  ></td>
+                        <td><img src="<?php echo $fila['ruta_pokemon']; ?>" alt="Pokemon" class="img-sc" ></td>
+                        <td><img src="<?php echo $fila['ruta_tipo']; ?>" alt="Tipo" class="img-sc"  ></td>
                         <td><?php echo $fila['numero']; ?></td>
                         <td><?php echo $fila['nombre']; ?></td>
                         <td id="formu"><form action="update-modificar.php" method="post">
-                            <input type="hidden" name="modificar" value="<?php echo $fila['numero']; ?>">
+                            <input type="hidden" name="modificar" value="<?php echo $fila['id']; ?>">
                             <input type="submit" value="Modificar" class="update" id="modificar">
                         </form>
                         <form action="update.php" method="post">
-                        <input type="hidden" name="eliminar" value="<?php echo $fila['numero']; ?>">
+                        <input type="hidden" name="eliminar" value="<?php echo $fila['id']; ?>">
                         <input type="submit" value="Eliminar" class="update" id="eliminar">
                         </form>
                     </td>
@@ -87,7 +87,7 @@ $datos = $db->query($query);
         unset($_SESSION['mensaje']);
     }
     ?>
-        <form action="subirNuevoPokemon.php" method="post" enctype="multipart/form-data"
+        <form action="update.php" method="post" enctype="multipart/form-data"
         class="w3-card-4 w3-padding">
 
         <div class="contenedor">
@@ -97,7 +97,7 @@ $datos = $db->query($query);
           
         <div class="contenedor">
         <label for="equipo">Tipo</label>
-        <select name="tipo-poke" id="">
+        <select name="tipo-poke">
             <option value="0">Seleccionar tipo</option>
             <option value="fuego">Fuego</option>
             <option value="agua">Agua</option>

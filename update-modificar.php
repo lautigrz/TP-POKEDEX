@@ -6,7 +6,7 @@ $db = new Database();
 
 $modificar = $_POST["modificar"];
 
-$sql = "SELECT * FROM pokemon WHERE numero = $modificar";
+$sql = "SELECT * FROM pokemon WHERE id = $modificar";
 $resultado = $db->query($sql);
 
 // Verificar que se encontraron resultados
@@ -52,12 +52,12 @@ if (!empty($resultado)) {
 
         <div class="contenedor">
         <label for="jugador">Subir jugador</label>
-        <input type="file" name="pokemon" id="jugador" required> 
+        <input type="file" name="pokemon-mod" id="jugador" required> 
         </div>
           
         <div class="contenedor">
         <label for="equipo">Tipo</label>
-        <select name="tipo-poke" id="">
+        <select name="tipo-poke-mod" id="">
             <option value="0">Seleccionar tipo</option>
             <option value="fuego">Fuego</option>
             <option value="agua">Agua</option>
@@ -67,7 +67,7 @@ if (!empty($resultado)) {
            
             <input type="text" name="numero" value="<?php echo ($pokemon['numero']); ?>" required>
             <input type="text" name="nombre" value="<?php echo ($pokemon['nombre']); ?>"required>
-            <input type="hidden" name="id" value="<?php echo ($pokemon['id']); ?>">
+            <input type="hidden" name="modificar" value="<?php echo ($pokemon['id']); ?>">
             <input type="submit" value="Subir" class="subir">
         </form>
     </section>

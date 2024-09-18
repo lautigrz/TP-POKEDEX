@@ -111,7 +111,7 @@ width: 60%; /* Ancho fijo */
 height: 100px; /* Alto fijo */
 object-fit: cover; /* Asegura que la imagen no se distorsione */
 border-radius: 5px; /* Bordes redondeados */
-border: 1px solid #ddd; /* Borde ligero */
+border: none; 
 }
 
 /* Estilo para el contenedor de la tabla */
