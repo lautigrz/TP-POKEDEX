@@ -72,10 +72,10 @@ function modificarFila($movi){
             $movi->eliminarDeLaCarpetaLocal($ruta);
         }
 
-        $_SESSION['update'] = "Modificacion exitosa";
+        $_SESSION['mensaje'] = "Modificacion exitosa";
         
     }else {
-        $_SESSION['update'] = "Error, no se pudo hacer la modificacion";
+        $_SESSION['mensaje'] = "Error, no se pudo hacer la modificacion";
     }
     
     header("Location: usuarioAdmin.php");
@@ -89,7 +89,7 @@ function eliminarFila($movi){
    
     if( $movi->getDb()->delete($sql) == true){
 
-    $_SESSION['update'] = "Se elimino correctamente.";
+    $_SESSION['mensaje'] = "Se elimino correctamente.";
     $movi->eliminarDeLaCarpetaLocal($ruta);
 
     }

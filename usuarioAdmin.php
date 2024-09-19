@@ -1,13 +1,15 @@
 
 <?php 
 session_start();
-require("database.php");
+require("movimientos.php");
+include_once("header.php");
 
-$db = new Database();
+$movi = new Movimientos();
 
-$query = "SELECT * FROM pokemon";
+$buscar = isset($_GET['buscado']) ? trim($_GET['buscado']) : '';
 
-$datos = $db->query($query);
+$datos = $movi->busqueda($buscar);
+
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +21,7 @@ $datos = $db->query($query);
     <title>Admin</title>
 </head>
 <body>
-    <?php include_once("header.php"); ?>
+
     
     <div class="ancla">
     <a href="#nuevo-pokemon">Agregar nuevo pokemon</a>
@@ -29,14 +31,14 @@ $datos = $db->query($query);
     <section class="tablas">
     <?php
 
-    if (isset($_SESSION['update'])) {
-        $mensaje = $_SESSION['update'];
+    if (isset($_SESSION['mensaje'])) {
+        $mensaje = $_SESSION['mensaje'];
 
   
         $clase = strpos($mensaje, "Error") === false ? 'query-exito' : 'query-error';
         echo "<div class=\"$clase\">$mensaje</div>";
    
-        unset($_SESSION['update']);
+        unset($_SESSION['mensaje']);
     }
         ?>
     <table>

@@ -28,7 +28,7 @@ public function subirAlaBaseDeDatos($data){
         }
     } catch (Exception $e) {
    
-        $_SESSION['mensaje'] = "Error, identificador duplicado";
+        $_SESSION['mensaje'] = "Error, numero duplicado";
     }
 
 
@@ -89,6 +89,63 @@ public function obtenerRutaDeImagenDeUnPokemonPorId($id){
     $resultado = $this->db->query($sql);
     $fila1 = $resultado[0];
     return $fila1 ['ruta_pokemon'];
+}
+
+public function busqueda($buscar){
+    
+    $mensaje = "";
+
+
+    if ($this->esIgualAUnTipo($buscar)) {
+        $query = "SELECT * FROM pokemon WHERE ruta_tipo LIKE '%$buscar%'";
+        $datos = $this->db->query($query);
+        if (!empty($datos)) {
+            return $datos; 
+        } else {
+            $mensaje = "Error, pokemon inexistente";
+        }
+    }
+
+  
+    if (is_numeric($buscar)) {
+        $query = "SELECT * FROM pokemon WHERE numero = $buscar";
+        $datos = $this->db->query($query);
+        if (!empty($datos)) {
+            return $datos; 
+        } else { 
+            $mensaje = "Error, pokemon inexistente";
+
+        }
+    }
+
+ 
+    if (is_string($buscar)) {
+        $query = "SELECT * FROM pokemon WHERE nombre LIKE '%$buscar%'";
+        $datos = $this->db->query($query);
+        if (!empty($datos)) {
+            return $datos; 
+        } else {
+            $mensaje = "Error, pokemon inexistente";
+        }
+    }
+
+  
+    if (!empty($mensaje)) {
+        $_SESSION['mensaje'] = $mensaje;
+    }
+
+
+    // Si no se encontró nada o no se ingresó búsqueda, mostrar todos los Pokémon
+    $query = "SELECT * FROM pokemon";
+    return $this->db->query($query);
+}
+
+public function esIgualAUnTipo($value){
+    $tipos = array("fuego", "agua", "hierba");
+
+    $minusculas = strtolower($value);
+    return in_array($minusculas, $tipos, true);
+
 }
 
 public function getDb() {

@@ -30,6 +30,7 @@
       
     }
     .buscador{
+        padding: 0.3em;
         width:80%;
         height:6vh
     }
@@ -60,7 +61,7 @@
     <form action="" method="get">
         <input type="text" name="buscado" placeholder="Ingrese nombre, tipo o numero de pokemon" class="buscador" id="header">
 
-        <input type="button" value="Que pokemon es?" class="boton" id="header">
+        <input type="submit" value="Que pokemon es?" class="boton" id="header">
     </form>
 </body>
 </html>
