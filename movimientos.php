@@ -93,7 +93,7 @@ public function obtenerRutaDeImagenDeUnPokemonPorId($id){
 
 public function busqueda($buscar){
     
-    $mensaje = "";
+    $mensaje = " ";
 
 
     if ($this->esIgualAUnTipo($buscar)) {

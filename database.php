@@ -27,11 +27,10 @@ class Database
         $colums = $this->obtenerColumnas($data);
         $values = $this->obtenerDatos($data);
 
-        // Crear la consulta SQL
+       
         $sql = "INSERT INTO $table ($columns) VALUES ($values)";
         
-        // Imprimir la consulta para depuración
-        echo "Consulta SQL: " . $sql . "<br>";
+    
         
         // Ejecutar la consulta
         if ($this->conexion->query($sql) === TRUE) {

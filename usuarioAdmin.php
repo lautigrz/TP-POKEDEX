@@ -55,7 +55,9 @@ $datos = $movi->busqueda($buscar);
                 <?php foreach ($datos as $fila): ?>
                     <tr>
                     
-                        <td><img src="<?php echo $fila['ruta_pokemon']; ?>" alt="Pokemon" class="img-sc" ></td>
+                        <td> <a href="vistaPokemon.php?id=<?php echo $fila['id']; ?>">
+                        <img src="<?php echo $fila['ruta_pokemon']; ?>" alt="Pokemon" class="img-sc" >
+                                                                                        </a></td>
                         <td><img src="<?php echo $fila['ruta_tipo']; ?>" alt="Tipo" class="img-sc"  ></td>
                         <td><?php echo $fila['numero']; ?></td>
                         <td><?php echo $fila['nombre']; ?></td>
@@ -109,7 +111,10 @@ $datos = $movi->busqueda($buscar);
            
             <input type="text" name="numero" placeholder="Numero" required>
             <input type="text" name="nombre" placeholder="Nombre"required>
-          
+            <div class="contenedor">
+            <label for="descrip">Descripcion</label>
+            <textarea name="descripcion" id="descrip" rows="5" cols="50"></textarea>
+            </div>
             <input type="submit" value="Subir" class="subir">
         </form>
 

@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+  
+}
+
+nav{
+    height: 20vh;
+    width: 100%;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,100px);
+    gap: 30px;
+    padding-left: 50px;
+    
+}
+
+.container-pokemon {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    grid-column: 1/2;
+    grid-row: 1/4;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    gap: 20px;
+   
+}
+.descripcion{
+    word-wrap: break-word; 
+    height: 100vh;
+    grid-column: 2/4;
+    grid-row: 2/4;
+}
+.descri{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    font-size: 1.3em;
+}
+
+.pokemon {
+    width: 100%; /* Ajusta el tamaño de la imagen del Pokémon */
+    height: auto;
+    object-fit:fill;
+}
+
+.tipo {
+    width: 20%; /* Ajusta el tamaño del icono del tipo */
+    height: 10vh;
+}
+
+.nombre {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+}

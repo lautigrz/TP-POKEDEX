@@ -12,7 +12,7 @@
     flex-direction: column;
     justify-content: space-around;
     width: 30%;
-    height:45vh;
+    height:50vh;
     border:1px solid black;
     border-radius:10px;
     padding:5%;
@@ -22,7 +22,7 @@
 }
 
 .nuevo-jugador > form > input{
-  height: 5vh;
+  height: 6vh;
   border:1px solid black;
   border-radius:10px;
 

@@ -8,17 +8,18 @@ $movi = new Movimientos();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     switch(true){
-        case $_POST["eliminar"]:
+        case isset($_POST["eliminar"]):
             eliminarFila($movi);
             break;
-        case $_POST["modificar"]:
+        case isset($_POST["modificar"]):
             modificarFila($movi);
             break;
-        case $_FILES['pokemon']:
+        case isset($_FILES['pokemon']):
             subirPokemon($movi);
             break;
     }
-
+    
+    header("Location: usuarioAdmin.php");
 }
 
 function subirPokemon($movi){
@@ -29,6 +30,7 @@ function subirPokemon($movi){
         $nombre = $_POST['nombre'];
         $numero = $_POST['numero'];
         $rutaImagen = $rutaImagenPokemon;
+        $descripcion = $_POST['descripcion'];
 
         if($tipoPoke != 0){
             $data = [
@@ -36,6 +38,7 @@ function subirPokemon($movi){
                 'ruta_tipo' =>  $rutaTipo,
                 'numero' => $numero,
                 'nombre' => $nombre,
+                'descripcion' => $descripcion,
             ];
             $movi->moverImagenAlDirectorioSiNoExiste($rutaImagenPokemon, 'pokemon');
             $movi->subirAlaBaseDeDatos($data);
@@ -44,7 +47,6 @@ function subirPokemon($movi){
         }
 
        
-        header("Location: usuarioAdmin.php");
 }
 
 function modificarFila($movi){
@@ -78,7 +80,7 @@ function modificarFila($movi){
         $_SESSION['mensaje'] = "Error, no se pudo hacer la modificacion";
     }
     
-    header("Location: usuarioAdmin.php");
+    
 }
 
 function eliminarFila($movi){
@@ -93,7 +95,7 @@ function eliminarFila($movi){
     $movi->eliminarDeLaCarpetaLocal($ruta);
 
     }
-    header("Location: usuarioAdmin.php");
+   
 }
 
 function devolverRuta($var){
