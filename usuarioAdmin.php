@@ -2,7 +2,7 @@
 <?php 
 session_start();
 require("movimientos.php");
-include_once("header.php");
+include_once("headerAdmin.php");
 
 $movi = new Movimientos();
 

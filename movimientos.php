@@ -152,6 +152,29 @@ public function getDb() {
     return $this->db;
 }
 
+//agregar funcion de buscar en la db el usuarioAdmin para el login
+//crear tabla admin con un usuario y contraseña, id
+    public function verificarAdmin($usuario, $password){
+
+
+    $sql = "SELECT * FROM admin";
+
+    $resultados = $this->db->query($sql);
+
+    $autenticado = false;
+
+    foreach ($resultados as $fila) {
+        if ($fila['usuario'] === $usuario && $fila['contraseña'] === $password) {
+            header("location: usuarioAdmin.php");
+            exit();
+        }
+    }
+
+    header("location: loginUsuarioAdmin.php");
+
+
+    }
+
 }
 
 ?>

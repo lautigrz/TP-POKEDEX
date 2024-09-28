@@ -25,13 +25,15 @@ if (isset($_GET['id'])) {
 <body>
 
     <nav>
-        s
+        <h1>Pokedex</h1>
+        <a href="index.php">Volver</a><!-- agregar estilo al boton de volver y estilo a la pagina en general-->
     </nav>
+
         <section class="contenedor">
          
         <div class="container-pokemon">
-        <img src="<?php echo $fila['ruta_pokemon']; ?>" class="pokemon">
-    </div>
+            <img src="<?php echo $fila['ruta_pokemon']; ?>" class="pokemon">
+        </div>
     
     <div class="container2">
         <img src="<?php echo $fila['ruta_tipo']; ?>" alt="Tipo" class="tipo">
