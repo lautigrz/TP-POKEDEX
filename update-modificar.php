@@ -65,9 +65,11 @@ if (!empty($resultado)) {
         </select>
         </div>
            
-            <input type="text" name="numero" value="<?php echo ($pokemon['numero']); ?>" required>
-            <input type="text" name="nombre" value="<?php echo ($pokemon['nombre']); ?>"required>
+            <input type="text" name="numero" value="<?php echo ($pokemon['numero']); ?>" placeholder="Numero" required>
+            <input type="text" name="nombre" value="<?php echo ($pokemon['nombre']); ?>" placeholder="Nombre" required>
             <input type="hidden" name="modificar" value="<?php echo ($pokemon['id']); ?>">
+            <label for="descrip">Descripcion</label>
+            <textarea name="descripcion" id="descrip" rows="5" cols="50"><?php echo ($pokemon['descripcion']); ?></textarea>
             <input type="submit" value="Subir" class="subir">
         </form>
     </section>

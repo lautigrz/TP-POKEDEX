@@ -20,6 +20,7 @@ nav{
 
 .container-pokemon {
     display: flex;
+    padding: 25px;
     justify-content: center;
     border: 1px solid black;
     grid-column: 1/2;

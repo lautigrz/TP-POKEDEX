@@ -21,12 +21,27 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/vistaPokemon.css">
     <title>Detalle del Pokémon</title>
+
+    <style>
+        nav{
+            display:flex;
+            width: 55%;
+            justify-content: space-between;
+            margin:20px;
+            
+            
+        }
+
+        nav > h1{
+            font-size:30px
+        }
+    </style>
 </head>
 <body>
 
     <nav>
+    <img src="imagenes/icon/images.png" alt="pokeball" style="width: 60px; height: 60px;">
         <h1>Pokedex</h1>
-        <a href="index.php">Volver</a><!-- agregar estilo al boton de volver y estilo a la pagina en general-->
     </nav>
 
         <section class="contenedor">

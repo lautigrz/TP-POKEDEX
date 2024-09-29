@@ -63,9 +63,10 @@ function modificarFila($movi){
     $rutaTipo = $movi->buscarTipo($tipoPoke);
     $numero = $_POST['numero'];
     $nombre = $_POST['nombre'];
+    $descripcion = $_POST['descripcion'];
 
     $sql = "UPDATE pokemon 
-    SET ruta_pokemon = '$rutaImagenPokemon', ruta_tipo = '$rutaTipo',  nombre = '$nombre', numero = '$numero'
+    SET ruta_pokemon = '$rutaImagenPokemon', ruta_tipo = '$rutaTipo',  nombre = '$nombre', numero = '$numero', descripcion = ' $descripcion'
     WHERE id = $modificar";
 
     if( $movi->getDb()->delete($sql) == true){
