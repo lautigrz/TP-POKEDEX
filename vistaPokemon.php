@@ -19,29 +19,17 @@ if (isset($_GET['id'])) {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/vistaPokemon.css">
+    <link rel="stylesheet" href="css/vistaPokemon.css">   
     <title>Detalle del Pokémon</title>
-
-    <style>
-        nav{
-            display:flex;
-            width: 55%;
-            justify-content: space-between;
-            margin:20px;
-            
-            
-        }
-
-        nav > h1{
-            font-size:30px
-        }
-    </style>
 </head>
 <body>
 
     <nav>
-    <img src="imagenes/icon/images.png" alt="pokeball" style="width: 60px; height: 60px;">
+    <div class="logo">
+        <img src="imagenes/icon/pokebola.png" alt="pokeball">
         <h1>Pokedex</h1>
+    </div>
+       
     </nav>
 
         <section class="contenedor">

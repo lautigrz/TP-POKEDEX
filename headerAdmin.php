@@ -2,77 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/headerAdmin.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Document</title>
 </head>
 
-<style>
-
-    *{
-        margin: 0;
-        padding: 0;
-    }
-
-    nav{
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-    }
-
-    .titulo{
-        text-align: center;
-        font-size:30px
-    }
-
-    form{
-
-        display: flex;
-        justify-content:center;
-
-    }
-    .buscador{
-        padding: 0.3em;
-        width:80%;
-        height:6vh
-    }
-    .boton{
-        width: 16%;
-        font-weight:600;
-        background-color: white;
-        cursor:pointer;
-    }
-    .boton:hover{
-        background-color:rgb(243, 241, 241 );
-    }
-    #header{
-        border:1px solid black;
-        border-radius:10px
-    }
-
-
-    .cerrarSesion a{
-        text-decoration: none;
-        padding: 10px;
-        color: white;
-        border-radius: 20px;
-        background-color: #9a1010;
-        transition: 0.3s;
-    }
-    .cerrarSesion a:hover{
-        color: grey;
-        transition: 0.3s;
-
-    }
-</style>
 
 <body>
 
 <nav>
     <div class="logo">
-        <img src="imagenes/icon/images.png" alt="pokeball" style="width: 60px; height: 60px;">
+        <img src="imagenes/icon/pokebola.png" alt="pokeball" style="width: 60px; height: 60px;">
     </div>
     <h3 class="titulo">Pokedex</h3>
 

@@ -35,8 +35,6 @@ if (!empty($resultado)) {
             flex-direction:column;
             width: 25%;
             gap:1px
-         
-           
         }
 
         input{
