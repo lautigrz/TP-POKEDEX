@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-09-2024 a las 21:23:51
+-- Tiempo de generación: 29-09-2024 a las 21:36:41
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -60,8 +60,8 @@ CREATE TABLE `pokemon` (
 --
 
 INSERT INTO `pokemon` (`id`, `ruta_pokemon`, `ruta_tipo`, `numero`, `nombre`, `descripcion`) VALUES
-(31, 'imagenes/DALL·E 2024-09-13 18.37.30 - A depiction of Chester Moore Hall, an 18th-century scientist and inventor, wearing typical 18th-century attire, with a formal coat, waistcoat, cravat,.webp', 'imagenes/tipo/fuego.png', 1, 'asd', 'asdads'),
-(32, 'imagenes/TELESCOPIO.png', 'imagenes/tipo/fuego.png', 2, 'asdasd', 'asdasdasd');
+(35, 'imagenes/charmander.png', 'imagenes/tipo/fuego.png', 433, 'Charmander', ' Charmander es un Pokémon de tipo Fuego de la primera generación (número 004 en la Pokédex), conocido por su apariencia similar a un pequeño dinosaurio bípedo con piel naranja. Tiene una cola característica con una llama en la punta, la cual refleja su estado de salud y emociones; si la llama se apaga, Charmander puede correr peligro. Es conocido por su naturaleza amigable y enérgica, pero también puede ser feroz en combate, especialmente cuando crece y evoluciona. Charmander es la primera etapa evolutiva de Charizard, evolucionando a Charmeleon en el nivel 16 y luego a Charizard en el nivel 36.'),
+(36, 'imagenes/venusar.png', 'imagenes/tipo/hierba.png', 76, 'Venusar', 'Venusaur es un Pokémon de tipo Planta/Veneno de la primera generación (número 003 en la Pokédex), siendo la forma evolucionada final de Bulbasaur y su evolución intermedia, Ivysaur. Es un Pokémon grande y robusto con apariencia de reptil cuadrúpedo, cubierto por una flor gigante en su espalda. La flor crece gracias a la energía solar, y emite un dulce aroma que calma a otros seres vivos. Venusaur es conocido por su fuerte conexión con la naturaleza, capaz de controlar el crecimiento de plantas a su alrededor y aprovechar la luz solar para potenciar sus ataques. Es el símbolo de poder y madurez de la línea evolutiva, especialmente notable por sus movimientos como Rayo Solar y Terremoto.');
 
 --
 -- Índices para tablas volcadas
@@ -94,7 +94,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT de la tabla `pokemon`
 --
 ALTER TABLE `pokemon`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
